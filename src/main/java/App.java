@@ -43,6 +43,13 @@ public class App {
               System.out.println(listOfCoins);
               System.out.println(number);
           }
+          while (number >= 2) {
+              System.out.println("number - 2");
+              listOfCoins.add(2);
+              number -= 2;
+              System.out.println(listOfCoins);
+              System.out.println(number);
+          }
       }
       return listOfCoins.size();
     }
