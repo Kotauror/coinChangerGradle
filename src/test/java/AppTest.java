@@ -23,6 +23,8 @@ public class AppTest {
         App classUnderTest = new App();
         assertEquals("case for 97", 5, classUnderTest.coinChanger(97));
     }
-
-
+    @Test public void returnsNumberOfCoins50_20_10_5_2_1() {
+        App classUnderTest = new App();
+        assertEquals("case for 98", 6, classUnderTest.coinChanger(98));
+    }
 }

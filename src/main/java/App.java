@@ -35,6 +35,10 @@ public class App {
               listOfCoins.add(2);
               number -= 2;
           }
+          while (number >= 1) {
+              listOfCoins.add(1);
+              number -= 1;
+          }
       }
       return listOfCoins.size();
     }
