@@ -1,61 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-05-16T10:34:09" hostname="Sams-Air.localdomain" time="0.024">
+<testsuite name="AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-05-16T10:42:47" hostname="Sams-Air.localdomain" time="0.006">
   <properties/>
-  <testcase name="returnsNumberOfCoins50_20_10" classname="AppTest" time="0.014"/>
-  <testcase name="returnsNumberOfCoins50" classname="AppTest" time="0.001"/>
-  <testcase name="returnsNumberOfCoins50_20_10_5_2" classname="AppTest" time="0.005"/>
-  <testcase name="returnsNumberOfCoins50_20_10_5" classname="AppTest" time="0.003"/>
-  <system-out><![CDATA[number - 50
-[50]
-40
-number - 20
-[50, 20]
-20
-number - 20
-[50, 20, 20]
-0
-number - 50
-[50]
-20
-number - 20
-[50, 20]
-0
-number - 20
-[20]
-20
-number - 20
-[20, 20]
-0
-number - 50
-[50]
-0
-number - 50
-[50]
-47
-number - 20
-[50, 20]
-27
-number - 20
-[50, 20, 20]
-7
-number - 5
-[50, 20, 20, 5]
-2
-number - 2
-[50, 20, 20, 5, 2]
-0
-number - 50
-[50]
-45
-number - 20
-[50, 20]
-25
-number - 20
-[50, 20, 20]
-5
-number - 5
-[50, 20, 20, 5]
-0
-]]></system-out>
+  <testcase name="returnsNumberOfCoins50_20_10" classname="AppTest" time="0.002"/>
+  <testcase name="returnsNumberOfCoins50" classname="AppTest" time="0.0"/>
+  <testcase name="returnsNumberOfCoins50_20_10_5_2" classname="AppTest" time="0.0"/>
+  <testcase name="returnsNumberOfCoins50_20_10_5" classname="AppTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
