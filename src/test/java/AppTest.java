@@ -14,6 +14,18 @@ public class AppTest {
         tester = new App();
     }
 
+    @Test public void singleLoopWorking() {
+      assertEquals("case for 50", 0, tester.singleLoop(50, 50));
+    }
+    @Test public void singleLoopWorking_40() {
+      assertEquals("case for 40", 0, tester.singleLoop(40, 20));
+    }
+    @Test public void singleLoopWorking_30() {
+      assertEquals("case for 30", 10, tester.singleLoop(30, 20));
+    }
+    @Test public void singleLoopWorking_14() {
+      assertEquals("case for 14", 4, tester.singleLoop(14, 5));
+    }
     @Test public void returnsNumberOfCoins50() {
         assertEquals("case for 50", 1, tester.coinChanger(50));
     }
