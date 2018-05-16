@@ -13,7 +13,6 @@ public class App {
 
     public int coinChanger(int number) {
       ArrayList<Integer> listOfCoins = new ArrayList<>();
-      while  (number > 0) {
           if (number >= 50 ) {
               listOfCoins.add(50);
               number -= 50;
@@ -26,7 +25,6 @@ public class App {
               listOfCoins.add(10);
               number -= 10;
           }
-
           while (number >= 5) {
               listOfCoins.add(5);
               number -= 5;
@@ -39,7 +37,6 @@ public class App {
               listOfCoins.add(1);
               number -= 1;
           }
-      }
       return listOfCoins.size();
     }
 }
