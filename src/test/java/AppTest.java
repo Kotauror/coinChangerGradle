@@ -5,8 +5,19 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+    @Test public void returnsNumberOfCoins50() {
         App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        assertEquals("case for 50", 1, classUnderTest.coinChanger(50));
     }
+    @Test public void returnsNumberOfCoins50_20_10() {
+        App classUnderTest = new App();
+        assertEquals("case for 90", 3, classUnderTest.coinChanger(90));
+        assertEquals("case for 70", 2, classUnderTest.coinChanger(70));
+        assertEquals("case for 40", 2, classUnderTest.coinChanger(40));
+    }
+    @Test public void returnsNumberOfCoins50_20_10_5() {
+        App classUnderTest = new App();
+        assertEquals("case for 95", 4, classUnderTest.coinChanger(95));
+    }
+
 }
