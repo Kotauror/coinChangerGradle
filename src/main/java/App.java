@@ -18,7 +18,7 @@ public class App {
         while(number >= coin) {
             listOfCoins.add(coin);
             number -= coin;
-        };
+        }
         return number;
     }
 }

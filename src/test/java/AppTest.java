@@ -47,4 +47,7 @@ public class AppTest {
     @Test public void returnsNumberOfCoins50_20_10_5_2_1() {
         assertEquals("case for 98", 6, tester.coinChanger(98));
     }
+    @Test public void returnsNumberOfCoins50_20_10_5_2_1_sec() {
+        assertEquals("case for 99", 6, tester.coinChanger(99));
+    }
 }

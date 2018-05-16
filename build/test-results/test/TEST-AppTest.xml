@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2018-05-16T14:11:57" hostname="Sams-Air.localdomain" time="0.014">
+<testsuite name="AppTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2018-05-16T14:52:57" hostname="Sams-Air.localdomain" time="0.013">
   <properties/>
-  <testcase name="returnsNumberOfCoins50" classname="AppTest" time="0.002"/>
+  <testcase name="returnsNumberOfCoins50" classname="AppTest" time="0.001"/>
   <testcase name="returnsNumberOfCoins50_20_10_5_2" classname="AppTest" time="0.001"/>
-  <testcase name="returnsNumberOfCoins50_20_10_5_2_1" classname="AppTest" time="0.0"/>
-  <testcase name="decreaseByCoin_14" classname="AppTest" time="0.0"/>
+  <testcase name="returnsNumberOfCoins50_20_10_5_2_1" classname="AppTest" time="0.001"/>
+  <testcase name="decreaseByCoin_14" classname="AppTest" time="0.001"/>
   <testcase name="decreaseByCoin_30" classname="AppTest" time="0.001"/>
   <testcase name="decreaseByCoin_40" classname="AppTest" time="0.0"/>
   <testcase name="decreaseByCoin_50" classname="AppTest" time="0.0"/>
-  <testcase name="returnsNumberOfCoins50_20_10_5" classname="AppTest" time="0.0"/>
+  <testcase name="returnsNumberOfCoins50_20_10_5_2_1_sec" classname="AppTest" time="0.0"/>
+  <testcase name="returnsNumberOfCoins50_20_10_5" classname="AppTest" time="0.001"/>
   <testcase name="returnsNumberOfCoins20_10" classname="AppTest" time="0.0"/>
   <testcase name="returnsNumberOfCoins20_20" classname="AppTest" time="0.0"/>
   <testcase name="returnsNumberOfCoins50_20" classname="AppTest" time="0.0"/>
