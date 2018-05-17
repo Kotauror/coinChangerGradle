@@ -4,6 +4,11 @@ public class App {
 
     public ArrayList<Integer> listOfCoins = new ArrayList<>();
 
+    public static void main(String[] args) {
+      App tester = new App();
+      tester.coinChanger(53);
+    }
+
     public int coinChanger(int number) {
         int num1 = decreaseByCoin(number, 50);
         int num2 = decreaseByCoin(num1, 20);
@@ -11,6 +16,7 @@ public class App {
         int num4 = decreaseByCoin(num3, 5);
         int num5 = decreaseByCoin(num4, 2);
         int num6 = decreaseByCoin(num5, 1);
+        System.out.println(listOfCoins.size());
         return listOfCoins.size();
     }
 
