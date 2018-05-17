@@ -5,6 +5,7 @@
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
+import java.io.*;
 
 public class AppTest {
 
@@ -13,7 +14,6 @@ public class AppTest {
     @Before public void initObject() {
         tester = new App();
     }
-
     @Test public void decreaseByCoin_50() {
       assertEquals("case for 50", 0, tester.decreaseByACoin(50, 50));
     }
@@ -41,10 +41,25 @@ public class AppTest {
     @Test public void returnsNumberOfCoins50_20_10_5() {
         assertEquals("case for 95", 4, tester.coinChanger(95));
     }
-    @Test public void returnsNumberOfCoins50_20_10_5_2() {
-        assertEquals("case for 97", 5, tester.coinChanger(97));
-    }
     @Test public void returnsNumberOfCoins50_20_10_5_2_1() {
         assertEquals("case for 98", 6, tester.coinChanger(98));
     }
+    @Test public void  printsResultForOneCoin() {
+        tester.resultPrinter(1);
+        OutputStream os = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(os);
+        System.setOut(ps);
+        System.out.print("You will get 1 coin");
+        assertEquals("You will get 1 coin", os.toString());
+    }
+    @Test public void printsResultForManyCoins() {
+        tester.resultPrinter(2);
+        OutputStream os = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(os);
+        System.setOut(ps);
+        System.out.print("You will get 2 coins");
+        assertEquals("You will get 2 coins", os.toString());
+
+    }
+
 }

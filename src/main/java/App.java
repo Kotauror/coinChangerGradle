@@ -8,7 +8,8 @@ public class App {
    
     public static void main(String[] args) {
       App tester = new App();
-      tester.coinChanger(50);
+      int size = tester.coinChanger(50);
+      tester.resultPrinter(size);
     }
  
     public App() {
@@ -19,7 +20,6 @@ public class App {
         if (listOfCoins.size() > 0) {
           decreaseByACoin(numberToChange, listOfCoins.get(0));
         }
-        System.out.println(CoinsOfUser.size());
         return CoinsOfUser.size();
     }
 
@@ -31,5 +31,12 @@ public class App {
         listOfCoins.remove(0);
         coinChanger(numberToChange);
         return numberToChange;
+    }
+    
+    public static void resultPrinter(int size) {
+      if (size == 1) 
+         System.out.print("You will get: " + size + " coin");
+      else 
+        System.out.print("You will get: " + size + " coins"); 
     }
 }
