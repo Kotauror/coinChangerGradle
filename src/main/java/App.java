@@ -3,26 +3,26 @@ import java.util.Collections;
 
 public class App {
 
+    public ArrayList<Integer> CoinsOfUser = new ArrayList<>();
     public ArrayList<Integer> listOfCoins = new ArrayList<>();
-    public ArrayList<Integer> listOfBilons = new ArrayList<>();
     
     public App() {
-      Collections.addAll(listOfBilons, 50, 20, 10, 5, 2, 1);
+      Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);
     }
 
     public int coinChanger(int number) {
-        if (listOfBilons.size() > 0) {
-          decreaseByCoin(number, listOfBilons.get(0));
+        if (listOfCoins.size() > 0) {
+          decreaseByCoin(number, listOfCoins.get(0));
         }
-        return listOfCoins.size();
+        return CoinsOfUser.size();
     }
 
     public int decreaseByCoin(int number, int coin) {
         while(number >= coin) {
-            listOfCoins.add(coin);
+            CoinsOfUser.add(coin);
             number -= coin;
         };
-        listOfBilons.remove(0);
+        listOfCoins.remove(0);
         coinChanger(number);
         return number;
     }
