@@ -12,11 +12,11 @@ public class AppTest {
 
     public App tester;
 
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    // private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before public void initObject() {
         tester = new App();
-        System.setOut(new PrintStream(outContent));
+       //  System.setOut(new PrintStream(outContent));
     }
 
     @Test public void decreaseByCoin_50() {
@@ -66,14 +66,14 @@ public class AppTest {
     //     assertEquals("You will get 2 coins", os.toString());
     // }
 
-    @Test public void terminalOutput() {
-        System.out.print("hello");
-        assertEquals("hello", outContent.toString());
-    }
+    // @Test public void terminalOutput() {
+    //     System.out.print("hello");
+    //     assertEquals("hello", outContent.toString());
+    // }
 
-    @After
-      public void restoreStreams() {
-        System.setOut(System.out);
-        System.setErr(System.err);
-    }
+    // @After
+    //   public void restoreStreams() {
+    //     System.setOut(System.out);
+    //     System.setErr(System.err);
+    //  }
 }
