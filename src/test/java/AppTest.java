@@ -4,6 +4,7 @@
 
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.After;
 import static org.junit.Assert.*;
 import java.io.*;
 
@@ -11,9 +12,13 @@ public class AppTest {
 
     public App tester;
 
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
     @Before public void initObject() {
         tester = new App();
+        System.setOut(new PrintStream(outContent));
     }
+
     @Test public void decreaseByCoin_50() {
       assertEquals("case for 50", 0, tester.decreaseByACoin(50, 50));
     }
@@ -44,22 +49,31 @@ public class AppTest {
     @Test public void returnsNumberOfCoins50_20_10_5_2_1() {
         assertEquals("case for 98", 6, tester.coinChanger(98));
     }
-    @Test public void  printsResultForOneCoin() {
-        tester.resultPrinter(1);
-        OutputStream os = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(os);
-        System.setOut(ps);
-        System.out.print("You will get 1 coin");
-        assertEquals("You will get 1 coin", os.toString());
-    }
-    @Test public void printsResultForManyCoins() {
-        tester.resultPrinter(2);
-        OutputStream os = new ByteArrayOutputStream();
-        PrintStream ps = new PrintStream(os);
-        System.setOut(ps);
-        System.out.print("You will get 2 coins");
-        assertEquals("You will get 2 coins", os.toString());
+    // @Test public void  printsResultForOneCoin() {
+    //     // tester.resultPrinter(1);
+    //     ByteArrayOutputStream os = new ByteArrayOutputStream();
+    //     PrintStream ps = new PrintStream(os);
+    //     System.setOut(ps);
+    //     System.out.print("You will get 1 coin");
+    //     assertEquals("You will get 1 coin", os.toString());
+    // }
+    // @Test public void printsResultForManyCoins() {
+    //     // tester.resultPrinter(2);
+    //     OutputStream os = new ByteArrayOutputStream();
+    //     PrintStream ps = new PrintStream(os);
+    //     System.setOut(ps);
+    //     System.out.print("You will get 2 coins");
+    //     assertEquals("You will get 2 coins", os.toString());
+    // }
 
+    @Test public void terminalOutput() {
+        System.out.print("hello");
+        assertEquals("hello", outContent.toString());
     }
 
+    @After
+      public void restoreStreams() {
+        System.setOut(System.out);
+        System.setErr(System.err);
+    }
 }
