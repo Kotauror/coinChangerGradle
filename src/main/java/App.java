@@ -5,7 +5,12 @@ public class App {
 
     public ArrayList<Integer> CoinsOfUser = new ArrayList<>();
     public ArrayList<Integer> listOfCoins = new ArrayList<>();
-    
+   
+    public static void main(String[] args) {
+      App tester = new App();
+      tester.coinChanger(50);
+    }
+ 
     public App() {
       Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);
     }
@@ -14,6 +19,7 @@ public class App {
         if (listOfCoins.size() > 0) {
           decreaseByACoin(numberToChange, listOfCoins.get(0));
         }
+        System.out.println(CoinsOfUser.size());
         return CoinsOfUser.size();
     }
 
