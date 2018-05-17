@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class App {
 
@@ -6,12 +7,7 @@ public class App {
     public ArrayList<Integer> listOfBilons = new ArrayList<>();
     
     public App() {
-      listOfBilons.add(0, 50); 
-      listOfBilons.add(1, 20); 
-      listOfBilons.add(2, 10); 
-      listOfBilons.add(3, 5); 
-      listOfBilons.add(4, 2); 
-      listOfBilons.add(5, 1); 
+      Collections.addAll(listOfBilons, 50, 20, 10, 5, 2, 1);
     }
 
     public int coinChanger(int number) {
