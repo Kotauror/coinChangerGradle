@@ -12,8 +12,8 @@ public class App {
 
     public static void main(String[] args) {
       App tester = new App();
-      int finalResult = tester.coinChanger(50);
-      tester.resultPrinter(finalResult);
+      int finalResult = tester.coinChanger(52);
+      resultPrinter(finalResult);
     }
 
     public int coinChanger(int numberToChange) {
