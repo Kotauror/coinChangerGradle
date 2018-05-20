@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class App {
 
-    public ArrayList<Integer> CoinsOfUser = new ArrayList<>();
+    public static ArrayList<Integer> CoinsOfUser = new ArrayList<>();
     public static ArrayList<Integer> listOfCoins = new ArrayList<>();
 
     public App() {
@@ -12,15 +12,15 @@ public class App {
 
     public static void main(String[] args) {
       App tester = new App();
-      int finalResult = tester.coinChanger(52);
-      tester.resultPrinter(finalResult);
+      tester.coinChanger(78);
+      tester.resultPrinter(CoinsOfUser);
     }
 
-    public int coinChanger(int numberToChange) {
+    public ArrayList<Integer> coinChanger(int numberToChange) {
         if (listOfCoins.size() > 0) {
           decreaseByACoin(numberToChange, listOfCoins.get(0));
         }
-        return CoinsOfUser.size();
+        return CoinsOfUser;
     }
 
     public int decreaseByACoin(int numberToChange, int coin) {
@@ -33,10 +33,9 @@ public class App {
         return numberToChange;
     }
 
-    public static void resultPrinter(int finalResult) {
-      if (finalResult == 1)
-         System.out.print("You will get: " + finalResult + " coin");
-      else
-        System.out.print("You will get: " + finalResult + " coins"); 
+    public static String resultPrinter(ArrayList<Integer> userFinalCoins) {
+       System.out.print("You will get " + userFinalCoins.size() + " coins: " + userFinalCoins);
+       return "You will get " + userFinalCoins.size() + " coins: " + userFinalCoins;
+
     }
 }

@@ -5,8 +5,11 @@
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
+import junit.framework.Assert;
 import static org.junit.Assert.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class AppTest {
 
@@ -31,24 +34,19 @@ public class AppTest {
     @Test public void decreaseByCoin_14() {
       assertEquals("case for 14", 4, tester.decreaseByACoin(14, 5));
     }
-    @Test public void returnsNumberOfCoins50() {
-        assertEquals("case for 50", 1, tester.coinChanger(50));
+    @Test public void returnsArrayOfCoins50() {
+        ArrayList<Integer> afterOperation = tester.coinChanger(50);
+        ArrayList<Integer> expectedOutput = new ArrayList<>();
+        Collections.addAll(expectedOutput, 50);
+        assertTrue(afterOperation.equals(expectedOutput));
     }
-    @Test public void returnsNumberOfCoins50_20() {
-        assertEquals("case for 70", 2, tester.coinChanger(70));
+    @Test public void returnsArrayOfCoins20() {
+        ArrayList<Integer> aftOpTwo = tester.coinChanger(20);
+        ArrayList<Integer> expectedOutputTwo = new ArrayList<>();
+        Collections.addAll(expectedOutputTwo, 20);
+        assertTrue(aftOpTwo.equals(expectedOutputTwo));
     }
-    @Test public void returnsNumberOfCoins20_20() {
-        assertEquals("case for 40", 2, tester.coinChanger(40));
-    }
-    @Test public void returnsNumberOfCoins20_10() {
-        assertEquals("case for 30", 2, tester.coinChanger(30));
-    }
-    @Test public void returnsNumberOfCoins50_20_10_5() {
-        assertEquals("case for 95", 4, tester.coinChanger(95));
-    }
-    @Test public void returnsNumberOfCoins50_20_10_5_2_1() {
-        assertEquals("case for 98", 6, tester.coinChanger(98));
-    }
+
     // @Test public void  printsResultForOneCoin() {
     //     // tester.resultPrinter(1);
     //     ByteArrayOutputStream os = new ByteArrayOutputStream();
