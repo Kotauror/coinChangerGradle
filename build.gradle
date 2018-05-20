@@ -23,6 +23,7 @@ dependencies {
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
 }
 
 // In this section you declare where to find the dependencies of your project
