@@ -34,8 +34,9 @@ public class App {
     }
 
     public static String resultPrinter(ArrayList<Integer> userFinalCoins) {
-       System.out.print("You will get " + userFinalCoins.size() + " coins: " + userFinalCoins);
-       return "You will get " + userFinalCoins.size() + " coins: " + userFinalCoins;
-
+        String coinWord;
+        if (userFinalCoins.size() == 1) coinWord = " coin: "; else coinWord = " coins: ";
+        System.out.print("You will get " + userFinalCoins.size() + coinWord + userFinalCoins);
+        return "You will get " + userFinalCoins.size() + coinWord + userFinalCoins;
     }
 }

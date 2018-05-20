@@ -46,6 +46,12 @@ public class AppTest {
         Collections.addAll(expectedOutputTwo, 20);
         assertTrue(aftOpTwo.equals(expectedOutputTwo));
     }
+    @Test public void returnsArrayOfCoins73() {
+        ArrayList<Integer> aftOpTwo = tester.coinChanger(73);
+        ArrayList<Integer> expectedOutputTwo = new ArrayList<>();
+        Collections.addAll(expectedOutputTwo, 50, 20, 3, 1);
+        assertTrue(aftOpTwo.equals(expectedOutputTwo));
+    }
 
     // @Test public void  printsResultForOneCoin() {
     //     // tester.resultPrinter(1);
