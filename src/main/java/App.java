@@ -4,16 +4,16 @@ import java.util.Collections;
 public class App {
 
     public ArrayList<Integer> CoinsOfUser = new ArrayList<>();
-    public ArrayList<Integer> listOfCoins = new ArrayList<>();
+    public static ArrayList<Integer> listOfCoins = new ArrayList<>();
 
     public App() {
-      Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);
+      Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);  
     }
 
     public static void main(String[] args) {
       App tester = new App();
       int finalResult = tester.coinChanger(52);
-      resultPrinter(finalResult);
+      tester.resultPrinter(finalResult);
     }
 
     public int coinChanger(int numberToChange) {
