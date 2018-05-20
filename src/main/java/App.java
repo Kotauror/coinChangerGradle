@@ -6,11 +6,12 @@ public class App {
     public static ArrayList<Integer> CoinsOfUser = new ArrayList<>();
     public static ArrayList<Integer> listOfCoins = new ArrayList<>();
 
-    public App() {
-      Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);  
+    public static void FillListOfCoins() {
+      Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);
     }
 
     public static void main(String[] args) {
+      FillListOfCoins();
       App tester = new App();
       tester.coinChanger(78);
       tester.resultPrinter(CoinsOfUser);
