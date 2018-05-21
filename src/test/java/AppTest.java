@@ -39,19 +39,19 @@ public class AppTest {
     }
     
     @Test public void returnsArrayOfCoins50() {
-        ArrayList<Integer> afterOperation = tester.coinChanger(50);
+        ArrayList<Integer> afterOperation = tester.coinChanger(50, 0);
         ArrayList<Integer> expectedOutput = new ArrayList<>();
         Collections.addAll(expectedOutput, 50);
         assertTrue(afterOperation.equals(expectedOutput));
     }
     @Test public void returnsArrayOfCoins20() {
-        ArrayList<Integer> aftOpTwo = tester.coinChanger(20);
+        ArrayList<Integer> aftOpTwo = tester.coinChanger(20, 0);
         ArrayList<Integer> expectedOutputTwo = new ArrayList<>();
         Collections.addAll(expectedOutputTwo, 20);
         assertTrue(aftOpTwo.equals(expectedOutputTwo));
     }
     @Test public void returnsArrayOfCoins73() {
-        ArrayList<Integer> aftOpTwo = tester.coinChanger(73);
+        ArrayList<Integer> aftOpTwo = tester.coinChanger(73, 0);
         ArrayList<Integer> expectedOutputTwo = new ArrayList<>();
         Collections.addAll(expectedOutputTwo, 50, 20, 3, 1);
         log.info(Arrays.toString(expectedOutputTwo.toArray()));
@@ -60,7 +60,7 @@ public class AppTest {
     }
 
     @Test public void returnsArrayOfCoins53() {
-        ArrayList<Integer> aftOpTwo = tester.coinChanger(53);
+        ArrayList<Integer> aftOpTwo = tester.coinChanger(53, 0);
         ArrayList<Integer> expectedOutputTwo = new ArrayList<>();
         Collections.addAll(expectedOutputTwo, 50, 2, 1);
         assertTrue(aftOpTwo.equals(expectedOutputTwo));

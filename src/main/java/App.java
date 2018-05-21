@@ -12,13 +12,15 @@ public class App {
 
     public static void main(String[] args) {
       App tester = new App();
-      tester.coinChanger(78);
+      tester.coinChanger(78, 0);
       tester.resultPrinter(CoinsOfUser);
-    }
+    } 
 
-    public ArrayList<Integer> coinChanger(int numberToChange) {
-        if (listOfCoins.size() > 0) {
-          decreaseByACoin(numberToChange, listOfCoins.get(0));
+    public static int currentIndex = 0;
+
+    public ArrayList<Integer> coinChanger(int numberToChange, int currentIndex) {
+        if (currentIndex < 6) {
+          decreaseByACoin(numberToChange, listOfCoins.get(currentIndex));
         }
         return CoinsOfUser;
     }
@@ -28,8 +30,8 @@ public class App {
             CoinsOfUser.add(coin);
             numberToChange -= coin;
         };
-        listOfCoins.remove(0);
-        coinChanger(numberToChange);
+        currentIndex += 1;
+        coinChanger(numberToChange, currentIndex);
         return numberToChange;
     }
 
