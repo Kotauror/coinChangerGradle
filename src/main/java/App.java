@@ -4,11 +4,9 @@ import java.util.Collections;
 public class App {
 
     public static ArrayList<Integer> CoinsOfUser = new ArrayList<>();
-    public static ArrayList<Integer> listOfCoins = new ArrayList<>();
+    final int[] listOfCoins = {50, 20, 10, 5, 2, 1};
 
-    App () {
-      Collections.addAll(listOfCoins, 50, 20, 10, 5, 2, 1);  
-    }
+    App () {}
 
     public static void main(String[] args) {
       App app = new App();
@@ -17,8 +15,8 @@ public class App {
     }
 
     public ArrayList<Integer> changeCoins(int numberToChange, int indexOfCheckedCoin) {
-      if (indexOfCheckedCoin < listOfCoins.size()) {
-        int coin = listOfCoins.get(indexOfCheckedCoin); 
+      if (indexOfCheckedCoin < listOfCoins.length) {
+        int coin = listOfCoins[indexOfCheckedCoin]; 
         while (numberToChange >= coin) {
           CoinsOfUser.add(coin); 
           numberToChange -= coin;
