@@ -20,33 +20,29 @@ public class AppTest {
 
     @Test
     public void change50() {
-        ArrayList<Integer> afterOperation = app.changeCoins(50, 0);
-        ArrayList<Integer> expectedOutput = new ArrayList<>();
-        Collections.addAll(expectedOutput, 50);
+        int[] afterOperation = app.changeCoins(50, 0);
+        int[] expectedOutput = {50};
         assertTrue(afterOperation.equals(expectedOutput));
     }
 
     @Test
     public void change20() {
-        ArrayList<Integer> afterOperation = app.changeCoins(20, 0);
-        ArrayList<Integer> expectedOutput = new ArrayList<>();
-        Collections.addAll(expectedOutput, 20);
+        int[] afterOperation = app.changeCoins(20, 0);
+        int[] expectedOutput = {20};
         assertTrue(afterOperation.equals(expectedOutput));
     }
 
     @Test
     public void change73() {
-        ArrayList<Integer> afterOperation = app.changeCoins(73, 0);
-        ArrayList<Integer> expectedOutput = new ArrayList<>();
-        Collections.addAll(expectedOutput, 50, 20, 3, 1);
+        int[] afterOperation = app.changeCoins(73, 0);
+        int[] expectedOutput = {50, 20, 3, 1};
         assertTrue(afterOperation.equals(expectedOutput));
     }
 
     @Test 
     public void change53() {
-        ArrayList<Integer> afterOperation = app.changeCoins(53, 0);
-        ArrayList<Integer> expectedOutput = new ArrayList<>();
-        Collections.addAll(expectedOutput, 50, 2, 1);
+        int[] afterOperation = app.changeCoins(53, 0);
+        int[] expectedOutput = {50, 2, 1};
         assertTrue(afterOperation.equals(expectedOutput));
     }
 }
