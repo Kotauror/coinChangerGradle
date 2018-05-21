@@ -11,21 +11,21 @@ public class App {
     }
 
     public static void main(String[] args) {
-      App tester = new App();
-      tester.coinChanger(73, 0);
+      App app = new App();
+      app.coinChanger(73, 0);
       System.out.println(CoinsOfUser);
     }
 
     public ArrayList<Integer> coinChanger(int numberToChange, int indexOfCheckedCoin) {
-       if (indexOfCheckedCoin < listOfCoins.size()) {
+      if (indexOfCheckedCoin < listOfCoins.size()) {
         int coin = listOfCoins.get(indexOfCheckedCoin); 
-          while (numberToChange >= coin) {
-            CoinsOfUser.add(coin); 
-            numberToChange -= coin;
-          }
-          indexOfCheckedCoin += 1; 
-          coinChanger(numberToChange, indexOfCheckedCoin);
+        while (numberToChange >= coin) {
+          CoinsOfUser.add(coin); 
+          numberToChange -= coin;
         }
-        return CoinsOfUser;
+        indexOfCheckedCoin += 1; 
+        coinChanger(numberToChange, indexOfCheckedCoin);
+      }
+      return CoinsOfUser;
     }
 }
