@@ -54,8 +54,6 @@ public class AppTest {
         ArrayList<Integer> aftOpTwo = tester.coinChanger(73, 0);
         ArrayList<Integer> expectedOutputTwo = new ArrayList<>();
         Collections.addAll(expectedOutputTwo, 50, 20, 3, 1);
-        log.info(Arrays.toString(expectedOutputTwo.toArray()));
-        log.info(Arrays.toString(aftOpTwo.toArray()));
         assertTrue(aftOpTwo.equals(expectedOutputTwo));
     }
 

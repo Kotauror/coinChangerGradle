@@ -16,11 +16,11 @@ public class App {
       tester.resultPrinter(CoinsOfUser);
     } 
 
-    public static int currentIndex = 0;
+    public static int indexOfCheckedCoin = 0;
 
-    public ArrayList<Integer> coinChanger(int numberToChange, int currentIndex) {
-        if (currentIndex < 6) {
-          decreaseByACoin(numberToChange, listOfCoins.get(currentIndex));
+    public ArrayList<Integer> coinChanger(int numberToChange, int indexOfCheckedCoin) {
+        if (indexOfCheckedCoin < 6) {
+          decreaseByACoin(numberToChange, listOfCoins.get(indexOfCheckedCoin));
         }
         return CoinsOfUser;
     }
@@ -30,8 +30,8 @@ public class App {
             CoinsOfUser.add(coin);
             numberToChange -= coin;
         };
-        currentIndex += 1;
-        coinChanger(numberToChange, currentIndex);
+        indexOfCheckedCoin += 1;
+        coinChanger(numberToChange, indexOfCheckedCoin);
         return numberToChange;
     }
 
