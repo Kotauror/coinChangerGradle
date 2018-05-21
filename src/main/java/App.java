@@ -16,23 +16,15 @@ public class App {
       System.out.println(CoinsOfUser);
     }
 
-    public static int indexOfCheckedCoin = 0;
-
     public ArrayList<Integer> coinChanger(int numberToChange, int indexOfCheckedCoin) {
         if (indexOfCheckedCoin < 6) {
-          decreaseByACoin(numberToChange, listOfCoins.get(indexOfCheckedCoin));
+          while (numberToChange >= listOfCoins.get(indexOfCheckedCoin)) {
+            CoinsOfUser.add(listOfCoins.get(indexOfCheckedCoin)); 
+            numberToChange -= listOfCoins.get(indexOfCheckedCoin);
+          }
+          indexOfCheckedCoin += 1; 
+          coinChanger(numberToChange, indexOfCheckedCoin);
         }
         return CoinsOfUser;
     }
-
-    public int decreaseByACoin(int numberToChange, int coin) {
-        while(numberToChange >= coin) {
-            CoinsOfUser.add(coin);
-            numberToChange -= coin;
-        };
-        indexOfCheckedCoin += 1;
-        coinChanger(numberToChange, indexOfCheckedCoin);
-        return numberToChange;
-    }
-
 }

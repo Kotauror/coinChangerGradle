@@ -19,18 +19,6 @@ public class AppTest {
         tester = new App();
        //  System.setOut(new PrintStream(outContent));
     }
-    @Test public void decreaseByCoin_50() {
-      assertEquals(0, tester.decreaseByACoin(50, 50), "case for 50");
-    }
-    @Test public void decreaseByCoin_40() {
-      assertEquals(0, tester.decreaseByACoin(40, 20), "case for 40");
-    }
-    @Test public void decreaseByCoin_30() {
-      assertEquals(10, tester.decreaseByACoin(30, 20));
-    }
-    @Test public void decreaseByCoin_14() {
-      assertEquals(4, tester.decreaseByACoin(14, 5));
-    }
     @Test public void returnsArrayOfCoins50() {
         ArrayList<Integer> afterOperation = tester.coinChanger(50, 0);
         ArrayList<Integer> expectedOutput = new ArrayList<>();
