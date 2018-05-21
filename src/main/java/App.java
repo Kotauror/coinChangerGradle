@@ -17,7 +17,7 @@ public class App {
     }
 
     public ArrayList<Integer> coinChanger(int numberToChange, int indexOfCheckedCoin) {
-        if (indexOfCheckedCoin < 6) {
+        if (indexOfCheckedCoin < listOfCoins.size()) {
           while (numberToChange >= listOfCoins.get(indexOfCheckedCoin)) {
             CoinsOfUser.add(listOfCoins.get(indexOfCheckedCoin)); 
             numberToChange -= listOfCoins.get(indexOfCheckedCoin);
