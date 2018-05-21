@@ -12,9 +12,9 @@ public class App {
 
     public static void main(String[] args) {
       App tester = new App();
-      tester.coinChanger(78, 0);
-      tester.resultPrinter(CoinsOfUser);
-    } 
+      tester.coinChanger(73, 0);
+      System.out.println(CoinsOfUser);
+    }
 
     public static int indexOfCheckedCoin = 0;
 
@@ -35,10 +35,4 @@ public class App {
         return numberToChange;
     }
 
-    public static String resultPrinter(ArrayList<Integer> userFinalCoins) {
-        String coinWord;
-        if (userFinalCoins.size() == 1) coinWord = " coin: "; else coinWord = " coins: ";
-        System.out.print("You will get " + userFinalCoins.size() + coinWord + userFinalCoins);
-        return "You will get " + userFinalCoins.size() + coinWord + userFinalCoins;
-    }
 }
