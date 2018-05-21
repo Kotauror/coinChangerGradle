@@ -12,11 +12,11 @@ public class App {
 
     public static void main(String[] args) {
       App app = new App();
-      app.coinChanger(73, 0);
+      app.changeCoins(73, 0);
       System.out.println(CoinsOfUser);
     }
 
-    public ArrayList<Integer> coinChanger(int numberToChange, int indexOfCheckedCoin) {
+    public ArrayList<Integer> changeCoins(int numberToChange, int indexOfCheckedCoin) {
       if (indexOfCheckedCoin < listOfCoins.size()) {
         int coin = listOfCoins.get(indexOfCheckedCoin); 
         while (numberToChange >= coin) {
@@ -24,7 +24,7 @@ public class App {
           numberToChange -= coin;
         }
         indexOfCheckedCoin += 1; 
-        coinChanger(numberToChange, indexOfCheckedCoin);
+        changeCoins(numberToChange, indexOfCheckedCoin);
       }
       return CoinsOfUser;
     }
