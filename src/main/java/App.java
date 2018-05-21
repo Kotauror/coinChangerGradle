@@ -17,10 +17,11 @@ public class App {
     }
 
     public ArrayList<Integer> coinChanger(int numberToChange, int indexOfCheckedCoin) {
-        if (indexOfCheckedCoin < listOfCoins.size()) {
-          while (numberToChange >= listOfCoins.get(indexOfCheckedCoin)) {
-            CoinsOfUser.add(listOfCoins.get(indexOfCheckedCoin)); 
-            numberToChange -= listOfCoins.get(indexOfCheckedCoin);
+       if (indexOfCheckedCoin < listOfCoins.size()) {
+        int coin = listOfCoins.get(indexOfCheckedCoin); 
+          while (numberToChange >= coin) {
+            CoinsOfUser.add(coin); 
+            numberToChange -= coin;
           }
           indexOfCheckedCoin += 1; 
           coinChanger(numberToChange, indexOfCheckedCoin);
