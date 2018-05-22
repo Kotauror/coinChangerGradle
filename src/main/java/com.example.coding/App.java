@@ -9,7 +9,7 @@ public class App {
 
       public static void main(String[] args) {
         CoinChanger coinChanger = new CoinChanger();
-         int[] finalCoinsOfUser = coinChanger.changeCoins(73, 0);
+         int[] finalCoinsOfUser = coinChanger.changeCoins(56);
           for (Integer coin : finalCoinsOfUser) {
             System.out.println(coin);    
           }

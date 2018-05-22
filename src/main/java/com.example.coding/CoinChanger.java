@@ -10,7 +10,9 @@ public class CoinChanger {
 
     public ArrayList<Integer> coinsOfUser = new ArrayList<>();
 
-    public int[] changeCoins(int numberToChange, int indexOfCheckedCoin) {
+    public int indexOfCheckedCoin = 0;
+
+    public int[] changeCoins(int numberToChange) {
         if (indexOfCheckedCoin < listOfCoins.length) {
             int coin = listOfCoins[indexOfCheckedCoin];
             while (numberToChange >= coin) {
@@ -18,7 +20,7 @@ public class CoinChanger {
                 numberToChange -= coin;
             }
             indexOfCheckedCoin += 1;
-            changeCoins(numberToChange, indexOfCheckedCoin);
+            changeCoins(numberToChange);
         }
         return coinsOfUser.stream().mapToInt(i -> i).toArray();
     }
